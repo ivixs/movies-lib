@@ -1,41 +1,96 @@
 #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #121212;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+  background-color: rgba(18, 18, 18, 0.96);
+  border-bottom: 1px solid rgba(247, 211, 84, 0.15);
 }
 
-#navbar h2 a{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+#navbar h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  white-space: nowrap;
 }
 
-#navbar form{
-    display: flex;
-    gap: 0.5rem;
+#navbar h2 a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#navbar form {
+  width: min(100%, 420px);
+  display: flex;
+  gap: 0.5rem;
 }
 
 #navbar input {
-    padding: 0.2rem 0.8rem;
-    border-radius: 4px;
-    border: none;
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-#navbar form button{
-    background-color: #f7d354;
-    border: 2px solid #f7d354;
-    border-radius: 4px;
-    color: #000;
-    padding:0.3rem;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+#navbar input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(247, 211, 84, 0.16);
 }
 
-#navbar form button:hover{
-    background-color: transparent;
-    color: #f7d354;
+#navbar form button {
+  min-width: 44px;
+  height: 44px;
+
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  color: #000000;
+
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#navbar form button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+@media (max-width: 620px) {
+  #navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  #navbar h2 a {
+    justify-content: center;
+  }
+
+  #navbar form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  #navbar h2 {
+    font-size: 1.2rem;
+  }
+
+  #navbar input {
+    font-size: 0.9rem;
+  }
 }

@@ -1,1 +1,11 @@
- 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  width: 100%;
+  flex: 1;
+  padding-bottom: 3rem;
+}

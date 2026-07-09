@@ -1,21 +1,49 @@
+:root {
+  --color-bg: #030303;
+  --color-surface: #121212;
+  --color-surface-light: #1c1c1c;
+  --color-primary: #f7d354;
+  --color-primary-dark: #b8930c;
+  --color-text: #ffffff;
+  --color-muted: #c7c7c7;
+
+  --container-width: 1180px;
+}
+
 * {
-    font-family: Helvetica;;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
-    color: white;
+  background: radial-gradient(circle at top, #1a1a1a 0, var(--color-bg) 45%);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: #F7D35D;
-    transition: 0.5s;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-a:hover{
-    color: #b8930c;
+a:hover {
+  color: var(--color-primary-dark);
 }

@@ -4,9 +4,12 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
-      <Outlet />
+
+      <main className="main-content">
+        <Outlet />
+      </main>
     </div>
   );
 }

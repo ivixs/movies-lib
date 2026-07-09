@@ -1,38 +1,44 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BiCameraMovie, BiSearchAlt2} from "react-icons/bi"
-import './Navbar.css';
+import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
+import "./Navbar.css";
 
-export default function Navbar(){
-    
-    const [search, setSearch] = useState("");
-    const navigate = useNavigate();
+export default function Navbar() {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        if(!search) return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        navigate(`/search?q=${search}`);
-        setSearch("");
-    }
-    
-    return (
-        <nav id="navbar">
-            <h2>
-                <Link to="/"><BiCameraMovie /> Movies lib</Link>
-            </h2>
-            <form onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                placeholder="Busque um filme"
-                onChange={(e) => setSearch(e.target.value)}
-                value={search}
-                />
-                <button type="submit">
-                    <BiSearchAlt2 />
-                </button>
-            </form>
-        </nav>
-    );
+    const searchTerm = search.trim();
+
+    if (!searchTerm) return;
+
+    navigate(`/search?q=${encodeURIComponent(searchTerm)}`);
+    setSearch("");
+  };
+
+  return (
+    <nav id="navbar">
+      <h2>
+        <Link to="/">
+          <BiCameraMovie />
+          Movies Lib
+        </Link>
+      </h2>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Busque um filme"
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
+        />
+
+        <button type="submit" aria-label="Pesquisar filme">
+          <BiSearchAlt2 />
+        </button>
+      </form>
+    </nav>
+  );
 }
