@@ -1,5 +1,10 @@
 # Movies Lib
 
+# Movies Lib
+
+[🔗 Acessar projeto online](https://movies-lib-ivixs.vercel.app/)
+
+
 Movies Lib é uma aplicação web desenvolvida em React com o objetivo de praticar conceitos de componentes, rotas, consumo de API, CSS e responsividade.
 
 O projeto exibe uma lista de filmes bem avaliados, permite buscar filmes pelo nome e visualizar detalhes como avaliação, orçamento, receita, duração e descrição.
