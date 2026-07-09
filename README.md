@@ -1,16 +1,64 @@
-# React + Vite
+# Movies Lib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movies Lib é uma aplicação web desenvolvida em React com o objetivo de praticar conceitos de componentes, rotas, consumo de API, CSS e responsividade.
 
-Currently, two official plugins are available:
+O projeto exibe uma lista de filmes bem avaliados, permite buscar filmes pelo nome e visualizar detalhes como avaliação, orçamento, receita, duração e descrição.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Objetivo do projeto
 
-## React Compiler
+Este projeto foi desenvolvido com base em estudos de React, com o intuito de praticar:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- criação de componentes;
+- uso de rotas com React Router;
+- consumo de API externa;
+- manipulação de estados com React Hooks;
+- organização de estilos com CSS;
+- responsividade para diferentes tamanhos de tela;
+- deploy com Vercel;
+- versionamento com Git e GitHub.
 
-## Expanding the ESLint configuration
+## Tecnologias utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- CSS
+- React Router DOM
+- React Icons
+- API do The Movie Database
+- Git e GitHub
+- Vercel
+
+## Funcionalidades
+
+- Listagem dos melhores filmes;
+- Busca de filmes por nome;
+- Página de detalhes para cada filme;
+- Exibição de avaliação, orçamento, receita e duração;
+- Tratamento de carregamento e erro;
+- Layout responsivo para computador, tablet e celular.
+
+## Estrutura do projeto
+
+```txt
+movies-lib/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── MovieCard.jsx
+│   │   ├── Navbar.jsx
+│   │   └── Navbar.css
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Search.jsx
+│   │   ├── Movie.jsx
+│   │   ├── Movie.css
+│   │   └── MoviesGrid.css
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
