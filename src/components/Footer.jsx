@@ -17,7 +17,7 @@ export default function Footer() {
           consumo de API.
         </p>
 
-        <small>&copy; {currentYear} Movies Lib. Todos os direitos reservados.</small>
+        <small>&copy; {currentYear} Movies Lib.</small>
       </div>
     </footer>
   );
