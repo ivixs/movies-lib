@@ -37,6 +37,7 @@ Este projeto foi desenvolvido com base em estudos de React, com o intuito de pra
 - Exibição de avaliação, orçamento, receita e duração;
 - Tratamento de carregamento e erro;
 - Página 404 personalizada para rotas inexistentes;
+- Rodapé personalizado com informações do projeto;
 - Layout responsivo para computador, tablet e celular.
 
 ## Estrutura do projeto
@@ -49,6 +50,8 @@ movies-lib/
 │   │   ├── MovieCard.jsx
 │   │   ├── Navbar.jsx
 │   │   └── Navbar.css
+│   │   └── Footer.jsx
+│   │   └── Footer.css
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Search.jsx
