@@ -36,6 +36,7 @@ Este projeto foi desenvolvido com base em estudos de React, com o intuito de pra
 - Página de detalhes para cada filme;
 - Exibição de avaliação, orçamento, receita e duração;
 - Tratamento de carregamento e erro;
+- Página 404 personalizada para rotas inexistentes;
 - Layout responsivo para computador, tablet e celular.
 
 ## Estrutura do projeto
@@ -54,6 +55,8 @@ movies-lib/
 │   │   ├── Movie.jsx
 │   │   ├── Movie.css
 │   │   └── MoviesGrid.css
+│   │   └── NotFound.jsx
+│   │   └── NotFound.css
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
